@@ -1,7 +1,7 @@
 // Главный компонент приложения, который по простому - функция, принимающая настройки(props) и отдающая виртуальный DOM, который в итоге рендерится
 //Тк имеем тут JSX выражение, то в обязательном порядке вызываем React, иначе не странспайлится. Также кидаем сюда компонент-конструктор и данные, которае будем туда передавать.
 
-import React from 'react';
+// import React from 'react';
 import paintingsData from './painting.json'
 import PaintingList from './components/PaintingList'
 import Logo from './components/Logo';
