@@ -1,5 +1,6 @@
 import React from 'react';
 import Painting from './Painting';
+import PropTypes from 'prop-types';
 
 
 const PaintingList = ({paintingsData}) => (
@@ -15,5 +16,11 @@ const PaintingList = ({paintingsData}) => (
                 quantity={number.quantity} /></li>))};
     </ul>
 );
+
+PaintingList.propTypes = {
+    paintingsData: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired
+    })).isRequired
+};
 
 export default PaintingList
