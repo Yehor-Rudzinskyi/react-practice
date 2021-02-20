@@ -3,6 +3,9 @@ import React from 'react';
 // чтобы рендерить элементы
 import ReactDOM from 'react-dom';
 import App from './App';
+import 'modern-normalize/modern-normalize.css';
+// Базовые Css стили можем просто заимпортировать тутоньки
+import './style.css';
 
 
 //Создаём виртуальный элемент DOM-дерева. Указываем тип элемента(тег)/ в объект его атрибуты(props) \ значение внутри тега(контент) - дети, то что будет стоять между закрывающим и открывающим тегом <а> ... </a>

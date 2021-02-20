@@ -1,9 +1,10 @@
 import React from 'react';
-import defaultImg from '../default.jpg';
+import defaultImg from './default.jpg';
 import propTypes from 'prop-types';
+import './Painting.css'
 
-const Painting = ({url,title,price,profileUrl,tag,quantity}) => (<div>
-    <img src={url} alt={title} width="480" />
+const Painting = ({url,title,price,profileUrl,tag,quantity}) => (<div className="Painting">
+    <img src={url} alt={title} />
     <h2>{title}</h2>
     <p>Цена: {price} кредитов</p>
     <p>Автор: <a href={profileUrl}> {tag} </a></p>

@@ -1,0 +1,14 @@
+.ColorPicker {
+  padding: 10px;
+}
+
+.ColorPicker-title {
+  line-height: 1.3;
+}
+
+.ColorPicker-options {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  margin: 4px;
+}

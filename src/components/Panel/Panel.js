@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+//Инлайним стили в элементах Реакта. Путём добавления выражения JSX {} и добавления самого объекта со свойствами стилей. Модно вынести их в переменную и передать ею
 
-
-const Panel = ({ title, children }) => (<div>
+const Panel = ({ title, children }) => (<div style={{
+    width: 500,
+    border: '2px solid tomato' }}>
  {title && <h2>{title}</h2>}
  {children}
 </div>);

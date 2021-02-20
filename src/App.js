@@ -1,25 +1,38 @@
 // Главный компонент приложения, который по простому - функция, принимающая настройки(props) и отдающая виртуальный DOM, который в итоге рендерится
 //Тк имеем тут JSX выражение, то в обязательном порядке вызываем React, иначе не странспайлится. Также кидаем сюда компонент-конструктор и данные, которае будем туда передавать.
 
-
+import React from 'react';
 import paintingsData from './painting.json'
-import PaintingList from './components/PaintingList'
+import PaintingList from './components/PaintingList/PaintingList'
 import Logo from './components/Logo';
-import Panel from './components/Panel'
+import Panel from './components/Panel/Panel'
+import ColorPicker from './components/ColorPicker/ColorPicker'
+import Notifications from './components/Notifications/Notifications'
 
 // Благодаря модулям джейсон парсится автоматом и залетает сюда уже просто массивом объектов. Нам остаётся только подставить данные.
 
-console.log(paintingsData);
+const colorPickerOptions = [
+  { label: 'red', color: '#F44336' },
+  { label: 'green', color: '#4CAF50' },
+  { label: 'blue', color: '#2196F3' },
+  { label: 'grey', color: '#607D8B' },
+  { label: 'pink', color: '#E91E63' },
+  { label: 'indigo', color: '#3F51B5' },
+];
 
 // Всё, что между закрывающимся и открывающимся тегом - это строка!!! Рендер коллекции можем осуществлять через map
 
-const numbers = [1,2,3,4,5,6]
+// const numbers = [1,2,3,4,5,6]
 
 const App = () => {
     return (
         <div>
             <Panel title="News new"><p>Hello</p></Panel>
+            <Notifications text='Congratulations!' type='success' />
+             <Notifications text = 'No good today!' type='error'/>
+            <ColorPicker colors = {colorPickerOptions } />
             <Panel><p>Privet</p> <p>lorem dfjkfj 3423 gjsfkj</p></Panel>
+
          <Logo text = "Главный компонент контейнер приложения" />
             <PaintingList paintingsData={paintingsData}/>
 
