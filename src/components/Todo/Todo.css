@@ -1,0 +1,30 @@
+.Todo__button {
+  background-color: teal;
+  color: rgb(90, 7, 46);
+  height: 30px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+}
+
+.Todo__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  padding: 10px;
+  border: 1px solid purple;
+}
+
+.Todo__text {
+  margin-right: 30px;
+  font-family: Arial, Helvetica, serif;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+}

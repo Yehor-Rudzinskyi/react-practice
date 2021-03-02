@@ -1,6 +1,9 @@
+@value primary-text-color from '../../vars.module.css';
+
 .notifications {
   line-height: 1.5;
   padding: 10px 15px;
+  color: primary-text-color from;
 }
 
 .error {
